@@ -1,4 +1,3 @@
-
 var twitter = require('twitter');
 var elasticsearch = require('elasticsearch');
 var moment = require('moment');
@@ -17,8 +16,7 @@ var twitter = new twitter({
 });
 
 twitter.stream('statuses/filter', {
-    'locations':'132.2,29.9,146.2,39.0,138.4,33.5,146.1,46.20',
-    'locations':'132.2,29.9,146.2,39.0,138.4,33.5,146.1,46.20',
+    'locations':'132.2,29.9,146.2,39.0,138.4,33.5,146.1,46.20'
 }, function(stream) {
     stream.on('data', function(data) {
         var body = {
